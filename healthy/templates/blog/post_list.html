@@ -1,20 +1,82 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-  {% for product in products %}
-        <div>
+<div class="container-fluid text-center">
+    <h2>ΠΡΟΪΟΝΤΑ</h2>
+    <h4>Οι κατηγορίες μας...</h4>
+    <br>
 
-        <h5> <a href="{% url 'post_detail' pk=product.pk %}">{{ product.title }}</a></h5>
-        <h5><span class="glyphicon glyphicon-euro"></span> {{ product.price }}</h5>
-
-        {% if product.category %}
-        <h5><span class="label label-warning">
-        <a href="{% url 'post_list' %}?cat={{ product.category_id }}">{{ product.category }}</a>
-         </span></h5>
-         {%  endif %}
-      {% comment %}  <p>{{ product.description|linebreaksbr }}</p> {% endcomment %}
+    <div class="row slideanim">
+        <div class="col-sm-4">
+            <span class="glyphicon glyphicon-leaf logo-small"></span>
+            <h4>Φυτικά Συμπληρώματα</h4>
+            <a href="{% url 'post_list' %}?cat=2">Δες τα προϊόντα της κατηγορίας</a>
         </div>
 
-  {% endfor %}
+        <div class="col-sm-4">
+            <span class="glyphicon glyphicon-heart logo-small"></span>
+            <h4>Λιπαρά Οξέα</h4>
+             <a href="{% url 'post_list' %}?cat=4">Δες τα προϊόντα της κατηγορίας</a>
+        </div>
+
+        <div class="col-sm-4">
+            <span class="glyphicon glyphicon-star logo-small"></span>
+            <h4>Βιταμίνες</h4>
+             <a href="{% url 'post_list' %}?cat=1">Δες τα προϊόντα της κατηγορίας</a>
+        </div>
+    </div> <!-- Κλείσιμο row -->
+
+    <br><br>
+
+    <div class="row slideanim">
+        <div class="col-sm-4">
+            <span class="glyphicon glyphicon-flash logo-small"></span>
+            <h4>Πρωτεΐνες</h4>
+            <a href="{% url 'post_list' %}?cat=5">Δες τα προϊόντα της κατηγορίας</a>
+        </div>
+        <div class="col-sm-4">
+            <span class="glyphicon glyphicon-certificate logo-small"></span>
+            <h4>Μέταλλα</h4>
+             <a href="{% url 'post_list' %}?cat=3">Δες τα προϊόντα της κατηγορίας</a>
+        </div>
+        <div class="col-sm-4">
+            <span class="glyphicon glyphicon-magnet logo-small"></span>
+            <h4>Αμινοξέα</h4>
+            <a href="{% url 'post_list' %}?cat=6">Δες τα προϊόντα της κατηγορίας</a>
+        </div>
+    </div> <!-- Κλείσιμο row -->
+
+    <br>
+
+    <div id="services" class="container-fluid text-center">
+        <h2>Όλα τα Προϊόντα</h2>
+        <div class="row">
+            {% for product in products %}
+            <div class="col-md-4 product-item">
+                <div class="product-box">
+                    <h5>
+                        <a href="{% url 'post_detail' pk=product.pk %}" class="product-title">
+                            {{ product.title }}
+                        </a>
+                    </h5>
+                    <h5 class="product-price">
+                        <span class="glyphicon glyphicon-euro"></span> {{ product.price }}
+                    </h5>
+
+                    {% if product.category %}
+                    <h5>
+                        <span class="label label-warning">
+                            <a href="{% url 'post_list' %}?cat={{ product.category_id }}" class="category-link">
+                                {{ product.category }}
+                            </a>
+                        </span>
+                    </h5>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div> <!-- Κλείσιμο row -->
+    </div> <!-- Κλείσιμο #services -->
+</div> <!-- Κλείσιμο container-fluid -->
 
 {% endblock content %}

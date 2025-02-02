@@ -102,50 +102,9 @@
 
 <!-- Container (Services Section) -->
 <div id="services" class="container-fluid text-center">
-  <h2>ΠΡΟΙΟΝΤΑ</h2>
-  <h4>Οι κατηγορίες μας...</h4>
-  <br>
-  <div class="row slideanim">
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-leaf logo-small"></span>
-      <h4>Φυτικά Συμπληρώματα</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
-    </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-heart logo-small"></span>
-      <h4>Λιπαρά Οξέα</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
-    </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-star logo-small"></span>
-      <h4>Βιταμίνες</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
-    </div>
-  </div>
-  <br><br>
-  <div class="row slideanim">
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-flash logo-small"></span>
-      <h4>Πρωτεΐνες</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
-    </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-certificate logo-small"></span>
-      <h4>Μέταλλα</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
-    </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-magnet logo-small"></span>
-      <h4 style="color:#303030;">Αμινοξέα</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
-    </div>
-  </div>
-</div>
-
-<div id="services" class="container-fluid text-center">
-
 
     {% block content %}
+
     {% endblock %}
 
 </div>>
@@ -172,8 +131,9 @@
 
 		  <div class="col-sm-4"  >
 		  <div class="thumbnail">
-			<img src="paris.jpg" alt="Paris" width="50" height="50">
-			<p><strong>Paris</strong></p>
+
+             <img src="{{ Products.image.url }}" alt="Paris" width="50" height="50">
+			<p><strong>Lamberts biotin</strong></p>
 			<p>Yes, we built Paris</p>
 		  </div>
 		  </div>

@@ -2,19 +2,60 @@
 
 {% block content %}
 
-        <div>
-
-        <h5> {{ products_detail.title }} </h5>
-        <h5><span class="glyphicon glyphicon-euro"></span> {{ product.price }}</h5>
-        <p>{{ products_detail.description|linebreaksbr }}</p>
-
-         {% if product.category %}
-        <h5><span class="label label-warning">
-        <a href="{% url 'post_list' %}?cat={{ product.category_id }}">{{ product.category }}</a>
-         </span></h5>
-         {%  endif %}
-
+<div class="container">
+    <div class="row">
+        <!-- Εικόνα προϊόντος -->
+        <div class="col-md-4 text-center">
+            {% if products_detail.image %}
+                <img src="{{ products_detail.image.url }}" class="img-responsive img-thumbnail" alt="{{ products_detail.title }}">
+            {% endif %}
         </div>
 
+        <!-- Τίτλος και Κατηγορία -->
+        <div class="col-md-8">
+            <h2 class="product-title">{{ products_detail.title }}</h2>
+
+            {% if products_detail.category %}
+                <h5>
+                    <span class="label label-warning">
+                        <a href="{% url 'post_list' %}?cat={{ products_detail.category_id }}" class="category-link">
+                            {{ products_detail.category }}
+                        </a>
+                    </span>
+                </h5>
+            {% endif %}
+
+            <h4 class="product-price">
+                <span class="glyphicon glyphicon-euro"></span> {{ products_detail.price }}
+            </h4>
+
+            <p class="product-description">
+                {{ products_detail.description|linebreaksbr }}
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Προαιρετικό CSS για Στοίχιση -->
+<style>
+    .product-title {
+        font-size: 22px;
+        font-weight: bold;
+        color: #333;
+    }
+    .product-price {
+        font-size: 18px;
+        font-weight: bold;
+        color: #d9534f;
+        margin-top: 10px;
+    }
+    .category-link {
+        color: #fff;
+        text-decoration: none;
+    }
+    .category-link:hover {
+        text-decoration: underline;
+    }
+</style>
 
 {% endblock content %}
