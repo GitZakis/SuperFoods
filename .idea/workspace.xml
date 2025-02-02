@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="064253c1-c3a9-4a15-b8ed-001ea2bcda79" name="Changes" comment="last before sleep2">
-      <change beforePath="$PROJECT_DIR$/.idea/SuperFoods.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SuperFoods.iml" afterDir="false" />
+    <list default="true" id="064253c1-c3a9-4a15-b8ed-001ea2bcda79" name="Changes" comment="sunday 1 commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/healthy/static/css/superfoods.css" beforeDir="false" afterPath="$PROJECT_DIR$/healthy/static/css/superfoods.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/healthy/templates/blog/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/healthy/templates/blog/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/healthy/templates/blog/post_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/healthy/templates/blog/post_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/healthy/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/healthy/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +97,7 @@
       <option name="presentableId" value="Default" />
       <updated>1738457943908</updated>
       <workItem from="1738457944971" duration="9024000" />
-      <workItem from="1738482592750" duration="5112000" />
+      <workItem from="1738482592750" duration="7617000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <option name="closed" value="true" />
@@ -142,7 +139,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738467644394</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="sunday 1 commit">
+      <option name="closed" value="true" />
+      <created>1738488511417</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1738488511417</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,6 +159,7 @@
     <MESSAGE value="gemisma apo skoytz" />
     <MESSAGE value="last before sleep" />
     <MESSAGE value="last before sleep2" />
-    <option name="LAST_COMMIT_MESSAGE" value="last before sleep2" />
+    <MESSAGE value="sunday 1 commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="sunday 1 commit" />
   </component>
 </project>

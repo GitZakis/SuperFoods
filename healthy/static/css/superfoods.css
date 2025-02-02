@@ -211,3 +211,95 @@ body {
         margin: 0 auto;
         background-color: #f9f9f9;
     }
+.product-box {
+    padding: 10px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.product-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+.product-title:hover {
+    color: #d9534f;
+    text-decoration: underline;
+}
+.product-price {
+    font-size: 14px;
+    font-weight: bold;
+    color: #d9534f;
+}
+.product-image-small {
+    max-width: 100%;
+    max-height: 150px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+}
+
+/* Γενικό στυλ για το carousel */
+#myCarousel .carousel-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Στυλ για κάθε slide */
+#myCarousel .carousel-inner .item {
+    padding: 20px;
+}
+
+/* Στυλ για τις εικόνες μέσα στο carousel */
+#myCarousel .thumbnail img {
+    width: 150px; /* Μικρότερες εικόνες */
+    height: 150px; /* Ίδιο ύψος με το width */
+    object-fit: contain; /* Διατηρεί τις αναλογίες της εικόνας χωρίς να την κόβει */
+    border-radius: 10px; /* Στρογγυλεμένες γωνίες */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ελαφριά σκιά */
+    background-color: #f9f9f9;
+    padding: 5px;
+}
+
+/* Βελτίωση εμφάνισης των κειμένων κάτω από τις εικόνες */
+#myCarousel .thumbnail p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #444;
+    margin-top: 10px;
+}
+
+/* Στυλ για το active slide */
+#myCarousel .item.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Στυλ για το pagination (κουκίδες) του Carousel */
+#myCarousel .carousel-indicators li {
+    background-color: #aaa;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+#myCarousel .carousel-indicators .active {
+    background-color: #d9534f;
+}
+
+/* Στυλ για τα κουμπιά πλοήγησης */
+#myCarousel .carousel-control {
+    width: 5%;
+}
+
+#myCarousel .carousel-control span {
+    font-size: 24px;
+    color: #333;
+}
