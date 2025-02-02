@@ -1,0 +1,20 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+        <div>
+
+        <h5> {{ products_detail.title }} </h5>
+        <h5><span class="glyphicon glyphicon-euro"></span> {{ product.price }}</h5>
+        <p>{{ products_detail.description|linebreaksbr }}</p>
+
+         {% if product.category %}
+        <h5><span class="label label-warning">
+        <a href="{% url 'post_list' %}?cat={{ product.category_id }}">{{ product.category }}</a>
+         </span></h5>
+         {%  endif %}
+
+        </div>
+
+
+{% endblock content %}
