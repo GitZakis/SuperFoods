@@ -32,3 +32,5 @@ def post_detail(request, pk):
     products_detail = get_object_or_404(Products, pk=pk)
     return render(request, 'blog/post_detail.html', {'products_detail': products_detail})
 
+def about_us(request):
+    return render(request, 'blog/about_us.html')
