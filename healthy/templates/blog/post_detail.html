@@ -1,8 +1,8 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-<div class="container">
-    <div class="row">
+<div class="container product-container">
+    <div class="row align-items-center">
         <!-- Εικόνα προϊόντος -->
         <div class="col-md-5 text-center">
             {% if products_detail.image %}
@@ -11,12 +11,12 @@
         </div>
 
         <!-- Λεπτομέρειες προϊόντος -->
-        <div class="col-md-7">
-            <h2 class="product-title">{{ products_detail.title }}</h2>
+        <div class="col-md-7 d-flex flex-column justify-content-center">
+            <h2 class="product-title text-uppercase">{{ products_detail.title }}</h2>
 
             {% if products_detail.category %}
                 <h5>
-                    <span class="label label-warning">
+                    <span class="label label-warning product-category">
                         <a href="{% url 'post_list' %}?cat={{ products_detail.category.id }}" class="category-link">
                             {{ products_detail.category }}
                         </a>
@@ -31,8 +31,9 @@
             <p class="product-description">
                 {{ products_detail.description|linebreaksbr }}
             </p>
+
+            <button class="btn btn-primary btn-lg product-button">Προσθήκη στο καλάθι</button>
         </div>
     </div>
 </div>
-
 {% endblock content %}

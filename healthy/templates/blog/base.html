@@ -124,30 +124,62 @@
   <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
-        {% for image in recommended_images %}
-            <li data-target="#myCarousel" data-slide-to="{{ forloop.counter0 }}" class="{% if forloop.first %}active{% endif %}"></li>
-        {% endfor %}
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
     </ol>
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
-        {% for image in recommended_images %}
-        {% if forloop.counter0|divisibleby:3 %} <!-- Νέο Slide κάθε 3 εικόνες -->
-        <div class="item {% if forloop.first %}active{% endif %}">
+        <!-- Πρώτο Slide -->
+        <div class="item active">
             <div class="row">
-        {% endif %}
-
                 <div class="col-sm-4">
                     <div class="thumbnail">
-                        <img src="/media/recommend/{{ image }}" class="img-responsive product-image-small" alt="Recommended Image">
+                        <img src="/media/recommend/image_1.jpeg" class="img-responsive">
+                        <p><a href="{% url 'post_detail' pk=1 %}"><h5>Lamberts Biotin</h5></a> </p>
+
                     </div>
                 </div>
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <img src="/media/recommend/image_2.jpeg" class="img-responsive">
+                        <p><a href="{% url 'post_detail' pk=7 %}"><h5>Now Foods Magnesium</h5></a> </p>
 
-        {% if forloop.counter|divisibleby:3 or forloop.last %} <!-- Κλείσιμο του Slide -->
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <img src="/media/recommend/image_3.jpeg" class="img-responsive">
+                        <p><a href="{% url 'post_detail' pk=3 %}"><h5>Solgar Formula VM-2000</h5></a> </p>
+
+                    </div>
+                </div>
             </div>
         </div>
-        {% endif %}
-        {% endfor %}
+
+        <!-- Δεύτερο Slide -->
+        <div class="item">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <img src="/media/recommend/image_4.jpeg" class="img-responsive">
+                        <p><a href="{% url 'post_detail' pk=8 %}"><h5>Moller's Forte Omega-3 </h5></a> </p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <img src="/media/recommend/image_2.jpeg" class="img-responsive">
+                        <p><a href="{% url 'post_detail' pk=7 %}"><h5>Now Foods Magnesium</h5></a> </p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <img src="/media/recommend/image_1.jpeg" class="img-responsive">
+                        <p><a href="{% url 'post_detail' pk=1 %}"><h5>Lamberts Biotin</h5></a> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Left and right controls -->
@@ -161,7 +193,6 @@
     </a>
   </div>
 </div>
-<p>🔍 DEBUG: {{ recommended_images }}</p>
 
 
 

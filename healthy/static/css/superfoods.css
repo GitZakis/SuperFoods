@@ -184,9 +184,10 @@ body {
         box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
         margin-bottom: 20px;
         text-align: center;
+
     }
     .product-title {
-        font-size: 16px;
+        font-size: 10px;
         font-weight: bold;
         color: #333;
         text-decoration: none;
@@ -212,7 +213,7 @@ body {
         background-color: #f9f9f9;
     }
 .product-box {
-    padding: 10px;
+    padding: 8px;
     background: #fff;
     border-radius: 8px;
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
@@ -234,8 +235,8 @@ body {
     color: #d9534f;
 }
 .product-image-small {
-    max-width: 100%;
-    max-height: 150px;
+    max-width: 80%;
+    max-height: 100px;
     object-fit: contain;
     display: block;
     margin: 0 auto;
@@ -302,4 +303,122 @@ body {
 #myCarousel .carousel-control span {
     font-size: 24px;
     color: #333;
+}
+
+/* Κοντέινερ προϊόντος */
+.product-container {
+    margin-top: 40px;
+    padding: 40px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Εικόνα προϊόντος */
+.product-image {
+    max-width: 100%;
+    max-height: 350px;
+    object-fit: contain;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Στοίχιση περιεχομένου για καλύτερη ευθυγράμμιση */
+.row.align-items-center {
+    display: flex;
+    align-items: center;
+}
+
+/* Τίτλος προϊόντος */
+.product-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+/* Κατηγορία προϊόντος */
+.product-category {
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+/* Τιμή προϊόντος */
+.product-price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d9534f;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Περιγραφή προϊόντος */
+.product-description {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Κουμπί αγοράς */
+.product-button {
+    margin-top: 20px;
+    background-color: #5cb85c;
+    color: white;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+.product-button:hover {
+    background-color: #4cae4c;
+}
+
+/* Στυλ μόνο για τη σελίδα "Όλα τα Προϊόντα" */
+.all-products-page .product-box {
+    padding: 6px; /* Μειωμένο padding */
+    max-width: 180px; /* Περιορισμένο πλάτος */
+    margin-bottom: 15px; /* Λιγότερο κενό ανάμεσα στα προϊόντα */
+}
+
+/* Μικρότερες εικόνες προϊόντων */
+.all-products-page .product-image-small {
+    max-width: 90%;
+    max-height: 120px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Μικρότερος τίτλος προϊόντος */
+.all-products-page .product-title {
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    line-height: 1.2;
+}
+
+/* Μικρότερη τιμή προϊόντος */
+.all-products-page .product-price {
+    font-size: 11px;
+    font-weight: bold;
+    color: #d9534f;
+    margin-top: 5px;
+}
+
+/* Μικρότερη κατηγορία προϊόντος */
+.all-products-page .product-category {
+    font-size: 15px;
+    padding: 3px 6px;
+    border-radius: 3px;
+    display: inline-block;
 }
