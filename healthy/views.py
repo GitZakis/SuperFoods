@@ -1,22 +1,28 @@
 from django.shortcuts import render,get_object_or_404,redirect
 from django.template.defaulttags import comment
-
 from .models import  Products,Categories,Manufacturers
 from django.utils import timezone
+from django.db.models import Q
 
 # Create your views here.
 def post_list(request):
     cat = request.GET.get('cat')
+    txt = request.GET.get('txt')
 
     if cat is None:
-       products = Products.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+        if txt:
+            product = Products.objects.filter(
+                (Q(description__contains=txt) | Q(description__contains=txt)) & Q(published_date__lte=timezone.now())).order_by(
+                'published_date')
+        else:
+            product = Products.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     elif cat.isdigit():
         cat = int(cat)
-        products = Products.objects.filter(published_date__lte=timezone.now()).filter(category=cat).order_by('published_date')
+        product = Products.objects.filter(published_date__lte=timezone.now()).filter(category=cat).order_by('published_date')
     else:
-        products = Products.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+        product = Products.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
 
-    return render(request, 'blog/post_list.html', {'products': products})
+    return render(request, 'blog/post_list.html', {'products': product})
 
 
 

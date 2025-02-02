@@ -175,3 +175,39 @@ body {
       font-size: 150px;
     }
   }
+
+
+    .product-box {
+        padding: 10px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .product-title {
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+        text-decoration: none;
+    }
+    .product-title:hover {
+        color: #d9534f;
+        text-decoration: underline;
+    }
+    .product-price {
+        font-size: 14px;
+        font-weight: bold;
+        color: #d9534f;
+        margin-top: 5px;
+    }
+    .product-image-small {
+        max-width: 100%;
+        max-height: 150px; /* Μικρότερη εικόνα */
+        width: auto;
+        height: auto;
+        object-fit: contain; /* Εξασφαλίζει ότι η εικόνα δεν κόβεται */
+        display: block;
+        margin: 0 auto;
+        background-color: #f9f9f9;
+    }

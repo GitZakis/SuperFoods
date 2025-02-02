@@ -1,24 +1,23 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-
 <div class="container">
     <div class="row">
         <!-- Εικόνα προϊόντος -->
-        <div class="col-md-4 text-center">
+        <div class="col-md-5 text-center">
             {% if products_detail.image %}
-                <img src="{{ products_detail.image.url }}" class="img-responsive img-thumbnail" alt="{{ products_detail.title }}">
+                <img src="{{ products_detail.image.url }}" class="img-responsive product-image" alt="{{ products_detail.title }}">
             {% endif %}
         </div>
 
-        <!-- Τίτλος και Κατηγορία -->
-        <div class="col-md-8">
+        <!-- Λεπτομέρειες προϊόντος -->
+        <div class="col-md-7">
             <h2 class="product-title">{{ products_detail.title }}</h2>
 
             {% if products_detail.category %}
                 <h5>
                     <span class="label label-warning">
-                        <a href="{% url 'post_list' %}?cat={{ products_detail.category_id }}" class="category-link">
+                        <a href="{% url 'post_list' %}?cat={{ products_detail.category.id }}" class="category-link">
                             {{ products_detail.category }}
                         </a>
                     </span>
@@ -35,27 +34,5 @@
         </div>
     </div>
 </div>
-
-<!-- Προαιρετικό CSS για Στοίχιση -->
-<style>
-    .product-title {
-        font-size: 22px;
-        font-weight: bold;
-        color: #333;
-    }
-    .product-price {
-        font-size: 18px;
-        font-weight: bold;
-        color: #d9534f;
-        margin-top: 10px;
-    }
-    .category-link {
-        color: #fff;
-        text-decoration: none;
-    }
-    .category-link:hover {
-        text-decoration: underline;
-    }
-</style>
 
 {% endblock content %}

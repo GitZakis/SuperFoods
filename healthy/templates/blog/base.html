@@ -46,11 +46,17 @@
   <p>We specialize in superfoods</p>
   <form>
     <div class="input-group">
-      <input type="search" class="form-control" size="50" placeholder="Search..." required>
-      <div class="input-group-btn">
-        <button type="button" class="btn btn-danger">Search</button>
+      <form type="get" action="/">
+
+         <input type="text" name="txt" class="form-control" size="50" placeholder="Search..." >
+         <div class="input-group-btn">
+
+            <input type="submit" value="Submit" class="btn btn-danger">
+         </div>
+      </form>
+
       </div>
-    </div>
+
   </form>
 </div>
 
@@ -132,7 +138,7 @@
 		  <div class="col-sm-4"  >
 		  <div class="thumbnail">
 
-             <img src="{{ Products.image.url }}" alt="Paris" width="50" height="50">
+             <img src="newyork.jpg" alt="Paris" width="50" height="50">
 			<p><strong>Lamberts biotin</strong></p>
 			<p>Yes, we built Paris</p>
 		  </div>

@@ -6,77 +6,81 @@
     <h4>Οι κατηγορίες μας...</h4>
     <br>
 
+    <!-- Κατηγορίες (6 κατηγορίες εμφανίζονται σωστά) -->
     <div class="row slideanim">
         <div class="col-sm-4">
             <span class="glyphicon glyphicon-leaf logo-small"></span>
-
             <a href="{% url 'post_list' %}?cat=2"><h4>Φυτικά Συμπληρώματα</h4></a>
         </div>
-
         <div class="col-sm-4">
             <span class="glyphicon glyphicon-heart logo-small"></span>
-
-             <a href="{% url 'post_list' %}?cat=4"><h4>Λιπαρά Οξέα</h4></a>
+            <a href="{% url 'post_list' %}?cat=4"><h4>Λιπαρά Οξέα</h4></a>
         </div>
-
         <div class="col-sm-4">
             <span class="glyphicon glyphicon-star logo-small"></span>
-
-             <a href="{% url 'post_list' %}?cat=1"><h4>Βιταμίνες</h4></a>
+            <a href="{% url 'post_list' %}?cat=1"><h4>Βιταμίνες</h4></a>
         </div>
-    </div> <!-- Κλείσιμο row -->
+    </div>
 
-    <br><br>
+    <br>
 
     <div class="row slideanim">
         <div class="col-sm-4">
             <span class="glyphicon glyphicon-flash logo-small"></span>
-
-            <a href="{% url 'post_list' %}?cat=5"> <h4>Πρωτεΐνες</h4></a>
+            <a href="{% url 'post_list' %}?cat=5"><h4>Πρωτεΐνες</h4></a>
         </div>
         <div class="col-sm-4">
             <span class="glyphicon glyphicon-certificate logo-small"></span>
-
-             <a href="{% url 'post_list' %}?cat=3"> <h4>Μέταλλα</h4></a>
+            <a href="{% url 'post_list' %}?cat=3"><h4>Μέταλλα</h4></a>
         </div>
         <div class="col-sm-4">
             <span class="glyphicon glyphicon-magnet logo-small"></span>
-
-            <a href="{% url 'post_list' %}?cat=6"> <h4>Αμινοξέα</h4></a>
+            <a href="{% url 'post_list' %}?cat=6"><h4>Αμινοξέα</h4></a>
         </div>
-    </div> <!-- Κλείσιμο row -->
+    </div>
 
     <br>
 
+    <!-- Λίστα Προϊόντων (3 προϊόντα ανά σειρά) -->
     <div id="services" class="container-fluid text-center">
         <h2>Όλα τα Προϊόντα</h2>
+
         <div class="row">
             {% for product in products %}
-            <div class="col-md-4 product-item">
-                <div class="product-box">
-                    <h5>
-                        <a href="{% url 'post_detail' pk=product.pk %}" class="product-title">
-                            {{ product.title }}
-                        </a>
-                    </h5>
-                    <h5 class="product-price">
-                        <span class="glyphicon glyphicon-euro"></span> {{ product.price }}
-                    </h5>
-
-                    {% if product.category %}
-                    <h5>
-                        <span class="label label-warning">
-                            <a href="{% url 'post_list' %}?cat={{ product.category_id }}" class="category-link">
-                                {{ product.category }}
-                            </a>
-                        </span>
-                    </h5>
-                    {% endif %}
+                {% if forloop.counter0|divisibleby:3 %}
+                    </div><div class="row">
+                {% endif %}
+                <div class="col-md-4">
+                    <div class="thumbnail product-box">
+                        <img src="{{ product.image.url }}" class="img-responsive product-image-small" alt="{{ product.title }}">
+                        <div class="caption">
+                            <h5>
+                                <a href="{% url 'post_detail' pk=product.pk %}" class="product-title">
+                                    {{ product.title }}
+                                </a>
+                            </h5>
+                            <h5 class="product-price">
+                                <span class="glyphicon glyphicon-euro"></span> {{ product.price }}
+                            </h5>
+                            {% if product.category %}
+                            <h5>
+                                <span class="label label-warning">
+                                    <a href="{% url 'post_list' %}?cat={{ product.category.id }}" class="category-link">
+                                        {{ product.category }}
+                                    </a>
+                                </span>
+                            </h5>
+                            {% endif %}
+                        </div>
+                    </div>
                 </div>
-            </div>
+            {% empty %}
+                <p>Δεν βρέθηκαν προϊόντα.</p>
             {% endfor %}
-        </div> <!-- Κλείσιμο row -->
-    </div> <!-- Κλείσιμο #services -->
-</div> <!-- Κλείσιμο container-fluid -->
+        </div>
+    </div>
+</div>
+
+
 
 {% endblock content %}
