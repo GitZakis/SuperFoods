@@ -14,13 +14,12 @@
         <div class="col-md-7 d-flex flex-column justify-content-center">
             <h2 class="product-title text-uppercase">{{ products_detail.title }}</h2>
 
-            {% if products_detail.category %}
+            {% if products_detail.manufacturer %}
                 <h5>
-                    <span class="label label-warning product-category">
-                        <a href="{% url 'post_list' %}?cat={{ products_detail.category.id }}" class="category-link">
-                            {{ products_detail.category }}
-                        </a>
-                    </span>
+                    Κατασκευαστής:
+                    <a href="{% url 'manufacturer_products' manufacturer_id=products_detail.manufacturer.pk %}" class="manufacturer-link">
+                        {{ products_detail.manufacturer.title_m }}
+                    </a>
                 </h5>
             {% endif %}
 
@@ -36,4 +35,29 @@
         </div>
     </div>
 </div>
-{% endblock content %}
+
+<!-- Προβολή όλων των προιόντων του ίδιου κατασκευαστή -->
+{% if products_detail.manufacturer %}
+    <div class="container related-products">
+        <h3>Περισσότερα προϊόντα από τον κατασκευαστή {{ products_detail.manufacturer.title_m }}</h3>
+        <div class="row">
+            {% for product in products_detail.manufacturer.products_set.all %}
+                <div class="col-md-4">
+                    <div class="thumbnail product-box">
+                        {% if product.image %}
+                            <img src="{{ product.image.url }}" class="img-responsive product-image-small" alt="{{ product.title }}">
+                        {% endif %}
+                        <div class="caption">
+                            <h5>
+                                <a href="{% url 'post_detail' pk=product.pk %}" class="product-title">
+                                    {{ product.title }}
+                                </a>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}
+{% endblock %}

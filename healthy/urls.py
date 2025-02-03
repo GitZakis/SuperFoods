@@ -7,6 +7,8 @@ urlpatterns = [
     path('', views.post_list, name='post_list'),
     path('post/<int:pk>', views.post_detail, name='post_detail'),
     path('about_us', views.about_us, name='about_us'),
+    path('manufacturer/<int:manufacturer_id>/', views.manufacturer_products, name='manufacturer_products')
+
 
 ]
 

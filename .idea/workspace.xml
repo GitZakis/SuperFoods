@@ -4,18 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="064253c1-c3a9-4a15-b8ed-001ea2bcda79" name="Changes" comment="sunday 2 commit">
+    <list default="true" id="064253c1-c3a9-4a15-b8ed-001ea2bcda79" name="Changes" comment="1 git sto github">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperFoods/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/SuperFoods/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/healthy/static/css/superfoods.css" beforeDir="false" afterPath="$PROJECT_DIR$/healthy/static/css/superfoods.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/healthy/templates/blog/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/healthy/templates/blog/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/healthy/templates/blog/post_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/healthy/templates/blog/post_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/healthy/templates/blog/post_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/healthy/templates/blog/post_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/healthy/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/healthy/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/recommend/2.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/recommend/3.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/recommend/4.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/recommend/image1.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/healthy/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/healthy/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,12 +24,25 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;GitZakis&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/GitZakis/SuperFoods&quot;,
+    &quot;accountId&quot;: &quot;39c71ac4-7564-4627-b6aa-a4381c5e2b54&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -44,22 +52,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Django Server.SuperFoods.executor": "Run",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/Python/DjangoProject/Supplements",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Django Server.SuperFoods.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Python/DjangoProject/mysite&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="SuperFoods" type="Python.DjangoServer" factoryName="Django server">
       <module name="SuperFoods" />
@@ -104,7 +114,8 @@
       <option name="presentableId" value="Default" />
       <updated>1738457943908</updated>
       <workItem from="1738457944971" duration="9024000" />
-      <workItem from="1738482592750" duration="15869000" />
+      <workItem from="1738482592750" duration="21483000" />
+      <workItem from="1738609036025" duration="6507000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <option name="closed" value="true" />
@@ -162,7 +173,31 @@
       <option name="project" value="LOCAL" />
       <updated>1738494940471</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="sunday 3 commit">
+      <option name="closed" value="true" />
+      <created>1738499856809</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1738499856809</updated>
+    </task>
+    <task id="LOCAL-00009" summary="sunday 4 commit. carousell k shop">
+      <option name="closed" value="true" />
+      <created>1738502766035</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1738502766035</updated>
+    </task>
+    <task id="LOCAL-00010" summary="1 git sto github">
+      <option name="closed" value="true" />
+      <created>1738526644157</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1738526644157</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,6 +211,9 @@
     <MESSAGE value="last before sleep2" />
     <MESSAGE value="sunday 1 commit" />
     <MESSAGE value="sunday 2 commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="sunday 2 commit" />
+    <MESSAGE value="sunday 3 commit" />
+    <MESSAGE value="sunday 4 commit. carousell k shop" />
+    <MESSAGE value="1 git sto github" />
+    <option name="LAST_COMMIT_MESSAGE" value="1 git sto github" />
   </component>
 </project>
