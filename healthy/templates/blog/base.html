@@ -115,7 +115,7 @@
          {% endblock %}
 
     </div>
-
+  </div>
 
 <!-- Container (suppliers Section ) -->
 <div id="suppliers" class="container-fluid text-center">
@@ -134,37 +134,40 @@
 </div>
 
 
-<!-- Container (About Section) -->
+<!-- Container (Values Section) -->
 <div id="about" class="container-fluid bg-grey">
   <div class="row">
-    <div class="col-sm-4">
+    <!-- Εικόνα στα αριστερά -->
+    <div class="col-sm-3 text-center">
       <span class="glyphicon glyphicon-globe logo slideanim"></span>
     </div>
-    <div class="col-sm-8">
-      <h2>ΟΙ ΑΞΙΕΣ ΜΑΣ...</h2>
 
+    <!-- Κείμενο στα δεξιά -->
+    <div class="col-sm-9 text-left">
+      <h2 class="text-uppercase">ΟΙ ΑΞΙΕΣ ΜΑΣ...</h2>
       <h4><strong>Βασικές αξίες που μας καθοδηγούν:</strong></h4>
-        <ul>
-            <li><strong>Σεβασμός</strong> στον καταναλωτή</li>
-            <li><strong>Άριστη εξυπηρέτηση</strong> και κάλυψη των αναγκών του</li>
-            <li><strong>Ανάπτυξη καινοτόμων προϊόντων</strong> που ανταποκρίνονται στις απαιτήσεις της υγιεινής διατροφής</li>
-            <li><strong>Συνεχής βελτίωση</strong> της ποιότητας των προϊόντων μας</li>
-            <li><strong>Δέσμευση</strong> στην προστασία του περιβάλλοντος</li>
-            <li><strong>Σχέσεις εμπιστοσύνης</strong> με συνεργάτες και προμηθευτές</li>
-            <li><strong>Εντιμότητα και διαφάνεια</strong> απέναντι σε καταναλωτές, εργαζόμενους και συνεργάτες</li>
-        </ul>
+      <ul class="list-unstyled">
+        <li><strong>Σεβασμός</strong> στον καταναλωτή</li>
+        <li><strong>Άριστη εξυπηρέτηση</strong> και κάλυψη των αναγκών του</li>
+        <li><strong>Ανάπτυξη καινοτόμων προϊόντων</strong> που ανταποκρίνονται στις απαιτήσεις της υγιεινής διατροφής</li>
+        <li><strong>Συνεχής βελτίωση</strong> της ποιότητας των προϊόντων μας</li>
+        <li><strong>Δέσμευση</strong> στην προστασία του περιβάλλοντος</li>
+        <li><strong>Σχέσεις εμπιστοσύνης</strong> με συνεργάτες και προμηθευτές</li>
+        <li><strong>Εντιμότητα και διαφάνεια</strong> απέναντι σε καταναλωτές, εργαζόμενους και συνεργάτες</li>
+      </ul>
+
+      <h4><strong>Όραμά μας:</strong></h4>
+      <p>
+        Να καταξιωθεί η <strong>HEALTHY LIVING</strong> ως η πιο αξιόπιστη επιλογή στην ελληνική αγορά στον τομέα των προϊόντων υγιεινής διατροφής και συμπληρωμάτων
+        και παράλληλα, να επεκτείνουμε τη δυναμική μας παρουσία στο εξωτερικό.
+      </p>
     </div>
   </div>
+</div>
 
-<h4><strong>Όραμά μας:</strong></h4>
-<p>Να καταξιωθεί η <strong>HEALTHY LIVING</strong> ως η πιο αξιόπιστη επιλογή στην ελληνική αγορά στον τομέα των προϊόντων υγιεινής διατροφής και συμπληρωμάτων
-    και παράλληλα, να επεκτείνουμε τη δυναμική μας παρουσία στο εξωτερικό.</p>
 
     {% block content_about_us %}
-<br><a href="{% url 'about_us' %}" class="btn btn-default btn-lg">More about us...</a>
-
-
-
+    <a href="{% url 'about_us' %}" class="btn btn-default btn-lg">More about us...</a>
     {% endblock %}
 
     </div>
@@ -249,6 +252,6 @@ $(document).ready(function(){
   });
 })
 </script>
-
+</div>
 </body>
 </html>

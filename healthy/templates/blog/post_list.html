@@ -146,14 +146,7 @@
 
 {% block content_carousel %}
 
-    <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-        {% for product in random_carousel_products|slice:":3" %}
-            <li data-target="#myCarousel" data-slide-to="{{ forloop.counter0 }}" class="{% if forloop.first %}active{% endif %}"></li>
-        {% endfor %}
-    </ol>
-
+ <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
         {% for product in random_carousel_products %}
@@ -190,6 +183,7 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
+
 
 
 

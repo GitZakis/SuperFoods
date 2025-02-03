@@ -33,13 +33,15 @@ def post_list(request):
     random_products = random.sample(all_products,min(3, len(all_products)))
 
 
-    # Επιλέγουμε 6 τυχαια προιοντα  για το carousel
+    # # Επιλογή προϊόντων σε πολλαπλάσια του 3 για το carousel
     all_products = list(Products.objects.filter(published_date__lte=timezone.now()))
-    random_carousel_products = random.sample(all_products, min(6, len(all_products))) #
+    num_products = min(9, len(all_products))  # Μέγιστο 9 προϊόντα
+    num_products -= num_products % 3  # Στρογγυλοποίηση σε πολλαπλάσιο του 3
+    random_carousel_products = random.sample(all_products, num_products) if num_products > 0 else []
 
     return render(request, 'blog/post_list.html',
                   {'products': product, 'suppliers': suppliers, 'random_products': random_products,
-                   'random_carousel_products': random_carousel_products})
+                   'random_carousel_products': random_carousel_products })
 
 def post_detail(request, pk):
     products_detail = get_object_or_404(Products, pk=pk)

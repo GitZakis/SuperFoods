@@ -422,3 +422,38 @@ body {
     border-radius: 3px;
     display: inline-block;
 }
+#about {
+    padding: 50px 0;
+}
+
+#about h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+#about ul {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-top: 10px;
+}
+
+#about ul li {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+#about .glyphicon-globe {
+    font-size: 80px;
+    color: #2c3e50;
+}
+
+#about .col-sm-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#about .col-sm-9 {
+    padding-left: 30px;
+}
