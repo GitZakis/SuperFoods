@@ -1,0 +1,29 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<div class="container">
+    <h2 class="text-center">Επικοινωνήστε μαζί μας</h2>
+    <p class="text-center">Στείλτε μας ένα μήνυμα και θα επικοινωνήσουμε μαζί σας το συντομότερο δυνατό.</p>
+
+    <form method="POST" action="{% url 'contact' %}">
+        {% csrf_token %}
+        
+        <div class="form-group">
+            <label for="name">Όνομα:</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Μήνυμα:</label>
+            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Αποστολή</button>
+    </form>
+</div>
+{% endblock %}

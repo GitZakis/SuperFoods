@@ -125,3 +125,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT= os.path.join(BASE_DIR, 'media')
+
+# Mail send
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.live.com'  # geokyria1@ihu.gr
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'geokyria1@ihu.gr'  # Βάλε το email σου
+EMAIL_HOST_PASSWORD = 'online2!Zakis1'  # Βάλε τον κωδικό σου
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER

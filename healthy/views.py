@@ -28,7 +28,7 @@ def post_list(request):
     # φορτωνουμε τους κατασκευαστες
     suppliers = Manufacturers.objects.all()
 
-    # Επιλέγουμε 3 τυχαια προιοντα για προσφορα
+    # Επιλέγουμε 3 τυχαια προιοντα για προσφορα shop
     all_products = list(Products.objects.filter(published_date__lte=timezone.now()))
     random_products = random.sample(all_products,min(3, len(all_products)))
 
@@ -58,3 +58,22 @@ def manufacturer_products(request, manufacturer_id):
         'products': products,
         'selected_manufacturer': manufacturer
     })
+
+def contact_view(request):
+    if request.method == "POST":
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        message = request.POST.get('message')
+
+        # Θέμα και περιεχόμενο του email
+        subject = f"Νέο μήνυμα από {name} ({email})"
+        body = f"Όνομα: {name}\nEmail: {email}\n\nΜήνυμα:\n{message}"
+
+        # Αποστολή email
+        send_mail(subject, body, settings.DEFAULT_FROM_EMAIL, ['zakisgm@gmail.com'])
+
+        return redirect('contact_success')  # Σελίδα επιτυχίας
+
+    return render(request, 'blog/contact.html')
+def contact_success(request):
+    return render(request, 'blog/contact_success.html')
