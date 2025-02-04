@@ -33,10 +33,10 @@ def post_list(request):
     random_products = random.sample(all_products,min(3, len(all_products)))
 
 
-    # # Επιλογή προϊόντων σε πολλαπλάσια του 3 για το carousel
+    # # Επιλογή προιόντων σε πολλαπλάσια του 3 για το carousel
     all_products = list(Products.objects.filter(published_date__lte=timezone.now()))
-    num_products = min(9, len(all_products))  # Μέγιστο 9 προϊόντα
-    num_products -= num_products % 3  # Στρογγυλοποίηση σε πολλαπλάσιο του 3
+    num_products = min(9, len(all_products))
+    num_products -= num_products % 3
     random_carousel_products = random.sample(all_products, num_products) if num_products > 0 else []
 
     return render(request, 'blog/post_list.html',
@@ -59,6 +59,7 @@ def manufacturer_products(request, manufacturer_id):
         'selected_manufacturer': manufacturer
     })
 
+# mail θελει δουλεια ακομα.
 def contact_view(request):
     if request.method == "POST":
         name = request.POST.get('name')

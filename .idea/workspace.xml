@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="064253c1-c3a9-4a15-b8ed-001ea2bcda79" name="Changes" comment="4/2/25 update απο 3 για 4/2" />
+    <list default="true" id="064253c1-c3a9-4a15-b8ed-001ea2bcda79" name="Changes" comment="4/2/25 update 17.23">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/healthy/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/healthy/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,6 +112,7 @@
       <workItem from="1738457944971" duration="9024000" />
       <workItem from="1738482592750" duration="21483000" />
       <workItem from="1738609036025" duration="12227000" />
+      <workItem from="1738682505216" duration="1574000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <option name="closed" value="true" />
@@ -214,7 +218,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738622734381</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="4/2/25 update 17.23">
+      <option name="closed" value="true" />
+      <created>1738682593653</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1738682593653</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,6 +246,7 @@
     <MESSAGE value="3/2/25 last update" />
     <MESSAGE value="3/2/25 last update 2" />
     <MESSAGE value="4/2/25 update απο 3 για 4/2" />
-    <option name="LAST_COMMIT_MESSAGE" value="4/2/25 update απο 3 για 4/2" />
+    <MESSAGE value="4/2/25 update 17.23" />
+    <option name="LAST_COMMIT_MESSAGE" value="4/2/25 update 17.23" />
   </component>
 </project>
